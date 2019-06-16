@@ -17,7 +17,7 @@ wget -c -nv "https://github.com/probonopd/linuxdeployqt/releases/download/contin
 chmod a+x linuxdeployqt-continuous-x86_64.AppImage
 # The libraries passed in with -executable are loaded by obs with dlopen(), so linuxdeployqt can't know about them
 ./linuxdeployqt-continuous-x86_64.AppImage appdir/usr/share/applications/*.desktop -bundle-non-qt-libs \
--qmake=/usr/lib/x86_64-linux-gnu/qt5/bin/qmake \
+-qmake=/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -extra-plugins=iconengines,imageformats \
 -executable=appdir/usr/lib/obs-plugins/frontend-tools.so \
 -executable=appdir/usr/lib/obs-plugins/image-source.so \
 -executable=appdir/usr/lib/obs-plugins/linux-alsa.so \
