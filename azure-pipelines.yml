@@ -126,10 +126,6 @@ jobs:
   - script: ./CI/before-script-linux.sh
     displayName: 'CMake'
 
-  - bash: |
-      set -e
-      cd ./build
-      make -j4
-      cd -
+  - script: ./CI/script-linux-appimage.sh
     displayName: 'Build'
 
